@@ -3499,3 +3499,42 @@ body.auth-body {
     font-size: 14px;
   }
 }
+
+/* =========================================================
+   FLUID LAYOUT — Large Desktop (≥1400px)
+   Removes the fixed 1260 px cap on every layout wrapper
+   so the page stretches edge-to-edge on ultrawide monitors.
+   Mobile / tablet breakpoints below 1400 px are untouched.
+   ========================================================= */
+@media (min-width: 1400px) {
+  /* Header inner */
+  .header-inner {
+    max-width: 100%;
+    padding: 0 3rem;
+  }
+
+  /* Secondary nav inner */
+  .sec-nav-inner {
+    max-width: 100%;
+    padding: 0 3rem;
+  }
+
+  /* All content sections */
+  .container-site {
+    max-width: 100%;
+    padding: 0 3rem;
+  }
+
+  /* Hero banner wrapper */
+  .hero-fluid-wrap {
+    max-width: 100%;
+    padding: 0 3rem;
+  }
+
+  /* Footer inner container */
+  footer .container[style] {
+    max-width: 100% !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+}
