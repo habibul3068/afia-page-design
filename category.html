@@ -432,6 +432,31 @@
           <p>Scarf &amp; Dupatta</p>
         </div>
 
+        <div class="sub-cat-item">
+          <div class="circle-img"><img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=220&h=220&fit=crop&crop=top" alt="Kurtis" loading="lazy"/></div>
+          <p>Kurtis</p>
+        </div>
+        <div class="sub-cat-item">
+          <div class="circle-img"><img src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=220&h=220&fit=crop&crop=top" alt="Girls Frock" loading="lazy"/></div>
+          <p>Girls Frock</p>
+        </div>
+        <div class="sub-cat-item">
+          <div class="circle-img"><img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=220&h=220&fit=crop&crop=top" alt="Kids Dress Set" loading="lazy"/></div>
+          <p>Kids Dress Set</p>
+        </div>
+        <div class="sub-cat-item">
+          <div class="circle-img"><img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=220&h=220&fit=crop&crop=top" alt="Eid Panjabi" loading="lazy"/></div>
+          <p>Eid Panjabi</p>
+        </div>
+        <div class="sub-cat-item">
+          <div class="circle-img"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4b4d43?w=220&h=220&fit=crop&crop=top" alt="Womens Kurti" loading="lazy"/></div>
+          <p>Womens Kurti</p>
+        </div>
+        <div class="sub-cat-item">
+          <div class="circle-img"><img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?w=220&h=220&fit=crop&crop=top" alt="Festive Wear" loading="lazy"/></div>
+          <p>Festive Wear</p>
+        </div>
+
       </div>
     </div>
     <button class="sub-cat-arrow next" onclick="slideCategories(1)"><i class="fa fa-chevron-right"></i></button>
@@ -534,11 +559,12 @@
       <!-- PRODUCTS -->
       <div class="col-lg-10 col-md-9 col-12">
         <div class="products-header">
-          <div>
-            <h5>Eid Ul Fitr 26</h5>
-            <small>484 Items Found</small>
-          </div>
-          <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap mt-2">
+          <!-- Desktop View Header -->
+          <div class="d-none d-md-flex align-items-center justify-content-between w-100">
+            <div>
+              <h5 class="mb-1">Eid Ul Fitr 26</h5>
+              <small>404 Items Found</small>
+            </div>
             <div class="d-flex align-items-center gap-3">
               <div class="d-flex align-items-center gap-2">
                 <label style="font-size:13px;color:#555;">Sort By:</label>
@@ -550,401 +576,430 @@
                 </select>
               </div>
               <div class="view-btns">
-                <button class="view-btn active" onclick="setView(this,'grid')"><i class="fa fa-grip"></i></button>
-                <button class="view-btn" onclick="setView(this,'list')"><i class="fa fa-list"></i></button>
+                <button class="view-btn" onclick="setView(this,'grid')"><i class="fa fa-grip"></i></button>
+                <button class="view-btn active" onclick="setView(this,'list')"><i class="fa fa-list"></i></button>
               </div>
             </div>
-            <button class="mob-filter-btn d-md-none" onclick="openMobFilter(event)">
-              <i class="bi bi-funnel-fill"></i>
-              <span>Filter By</span>
-            </button>
+          </div>
+
+          <!-- Mobile View Header -->
+          <div class="d-flex d-md-none flex-column w-100 gap-3">
+            <div class="d-flex w-100 gap-2 mb-1">
+              <div class="w-50">
+                <select class="sort-select w-100" style="padding: 10px; border-radius: 8px; font-weight: 500; height: 44px;">
+                  <option>Sort By: Default</option>
+                  <option>Price: Low to High</option>
+                  <option>Price: High to Low</option>
+                  <option>Newest First</option>
+                </select>
+              </div>
+              <div class="w-50">
+                <button class="mob-filter-btn w-100 d-flex justify-content-center align-items-center gap-2" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-weight: 500; height: 44px; background-color: #fff;" onclick="openMobFilter(event)">
+                  <i style="color:#6c757d;" class="bi bi-sliders"></i>
+                  <span>Filter By</span>
+                </button>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between w-100 py-1" style="border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+               <div>
+                  <h5 class="mb-0" style="font-size: 15px;">Eid Ul Fitr 26</h5>
+                  <small style="color: #6c757d;">404 Items Found</small>
+               </div>
+               <div class="d-flex align-items-center gap-2">
+                 <span style="color:#6c757d;">View:</span>
+                 <div class="view-btns">
+                    <button class="view-btn active" onclick="setView(this,'grid')"><i class="bi bi-grid-fill"></i></button>
+                    <button class="view-btn" onclick="setView(this,'list')"><i class="bi bi-list-ul"></i></button>
+                 </div>
+               </div>
+            </div>
           </div>
         </div>
 
         <div class="row g-3" id="productGrid">
           <!-- Products using Unsplash images -->
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1614086138746-9d63b4c4b2b7?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2990</div>
-                <div class="product-name">Mens Panjabi - Regular Fit</div>
-                <span class="color-dot" style="background:#111;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2990</div>
+                <div class="prod-name">Mens Panjabi - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#111;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 6690</div>
-                <div class="product-name">Womens Ethnic 3 Pcs</div>
-                <span class="color-dot" style="background:#cc6633;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 6690</div>
+                <div class="prod-name">Womens Ethnic 3 Pcs</div>
+                <div class="color-row"><div class="color-swatch" style="background:#cc6633;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 1590</div>
-                <div class="product-name">Boys Panjabi - Regular Fit</div>
-                <span class="color-dot" style="background:#1a4d2e;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 1590</div>
+                <div class="prod-name">Boys Panjabi - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#1a4d2e;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1627833894893-92c34d890e77?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 1350</div>
-                <div class="product-name">Boys Panjabi - Regular Fit</div>
-                <span class="color-dot" style="background:#2d5a27;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 1350</div>
+                <div class="prod-name">Boys Panjabi - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#2d5a27;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2150</div>
-                <div class="product-name">Mens Panjabi - Regular Fit</div>
-                <span class="color-dot" style="background:#b71c1c;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2150</div>
+                <div class="prod-name">Mens Panjabi - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#b71c1c;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 1650</div>
-                <div class="product-name">Boys Panjabi - Regular Fit</div>
-                <span class="color-dot" style="background:#111;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 1650</div>
+                <div class="prod-name">Boys Panjabi - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#111;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 1390</div>
-                <div class="product-name">Boys Panjabi - Regular Fit</div>
-                <span class="color-dot" style="background:#333;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 1390</div>
+                <div class="prod-name">Boys Panjabi - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#333;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2190</div>
-                <div class="product-name">Mens Full Sleeve Casual Shirt - Slim Fit</div>
-                <span class="color-dot" style="background:#795548;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2190</div>
+                <div class="prod-name">Mens Full Sleeve Casual Shirt - Slim Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#795548;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2190</div>
-                <div class="product-name">Mens Full Sleeve Casual Shirt - Regular Fit</div>
-                <span class="color-dot" style="background:#5d4037;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2190</div>
+                <div class="prod-name">Mens Full Sleeve Casual Shirt - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#5d4037;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 3290</div>
-                <div class="product-name">Mens Panjabi - Regular Fit</div>
-                <span class="color-dot" style="background:#1565c0;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 3290</div>
+                <div class="prod-name">Mens Panjabi - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#1565c0;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2190</div>
-                <div class="product-name">Mens Full Sleeve Casual Shirt - Slim Fit</div>
-                <span class="color-dot" style="background:#1a3a5c;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2190</div>
+                <div class="prod-name">Mens Full Sleeve Casual Shirt - Slim Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#1a3a5c;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2190</div>
-                <div class="product-name">Mens Full Sleeve Casual Shirt - Regular Fit</div>
-                <span class="color-dot" style="background:#4a148c;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2190</div>
+                <div class="prod-name">Mens Full Sleeve Casual Shirt - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#4a148c;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2190</div>
-                <div class="product-name">Mens Full Sleeve Casual Shirt - Slim Fit</div>
-                <span class="color-dot" style="background:#1565c0;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2190</div>
+                <div class="prod-name">Mens Full Sleeve Casual Shirt - Slim Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#1565c0;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 1250</div>
-                <div class="product-name">Mens Polo Shirt - Slim Fit</div>
-                <span class="color-dot" style="background:#1565c0;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 1250</div>
+                <div class="prod-name">Mens Polo Shirt - Slim Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#1565c0;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 1850</div>
-                <div class="product-name">Mens Panjabi - Slim Fit</div>
-                <span class="color-dot" style="background:#1565c0;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 1850</div>
+                <div class="prod-name">Mens Panjabi - Slim Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#1565c0;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2035</div>
-                <div class="product-name">Mens Panjabi - Slim Fit</div>
-                <span class="color-dot" style="background:#7b1fa2;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2035</div>
+                <div class="prod-name">Mens Panjabi - Slim Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#7b1fa2;"></div></div>
               </div>
             </div>
           </div>
           <!-- 14 additional product cards -->
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 1790</div>
-                <div class="product-name">Womens Fashion Top - Slim Fit</div>
-                <span class="color-dot" style="background:#e91e63;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 1790</div>
+                <div class="prod-name">Womens Fashion Top - Slim Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#e91e63;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2450</div>
-                <div class="product-name">Womens Ethnic Set - 2 Pcs</div>
-                <span class="color-dot" style="background:#6a1b9a;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2450</div>
+                <div class="prod-name">Womens Ethnic Set - 2 Pcs</div>
+                <div class="color-row"><div class="color-swatch" style="background:#6a1b9a;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1548624313-0396a0f93ec3?w=300&h=400&fit=crop" alt="" loading="lazy"/>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 3150</div>
-                <div class="product-name">Mens Formal Shirt - Slim Fit</div>
-                <span class="color-dot" style="background:#0d47a1;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 3150</div>
+                <div class="prod-name">Mens Formal Shirt - Slim Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#0d47a1;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1588117305388-c2631a279f82?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 1490</div>
-                <div class="product-name">Boys Polo T-Shirt - Regular Fit</div>
-                <span class="color-dot" style="background:#00796b;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 1490</div>
+                <div class="prod-name">Boys Polo T-Shirt - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#00796b;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=300&h=400&fit=crop" alt="" loading="lazy"/>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2890</div>
-                <div class="product-name">Mens Casual Shirt - Regular Fit</div>
-                <span class="color-dot" style="background:#37474f;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2890</div>
+                <div class="prod-name">Mens Casual Shirt - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#37474f;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 5990</div>
-                <div class="product-name">Womens Ethnic Set - 3 Pcs</div>
-                <span class="color-dot" style="background:#ad1457;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 5990</div>
+                <div class="prod-name">Womens Ethnic Set - 3 Pcs</div>
+                <div class="color-row"><div class="color-swatch" style="background:#ad1457;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=300&h=400&fit=crop" alt="" loading="lazy"/>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 1190</div>
-                <div class="product-name">Girls Ethnic Top - Regular Fit</div>
-                <span class="color-dot" style="background:#f06292;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 1190</div>
+                <div class="prod-name">Girls Ethnic Top - Regular Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#f06292;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 3490</div>
-                <div class="product-name">Womens Western Gown - Party Wear</div>
-                <span class="color-dot" style="background:#1a237e;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 3490</div>
+                <div class="prod-name">Womens Western Gown - Party Wear</div>
+                <div class="color-row"><div class="color-swatch" style="background:#1a237e;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1594938298603-c8148c4b4d43?w=300&h=400&fit=crop" alt="" loading="lazy"/>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 1890</div>
-                <div class="product-name">Mens Joggers - Slim Fit</div>
-                <span class="color-dot" style="background:#212121;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 1890</div>
+                <div class="prod-name">Mens Joggers - Slim Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#212121;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2750</div>
-                <div class="product-name">Mens Panjabi - Slim Fit EID</div>
-                <span class="color-dot" style="background:#1b5e20;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2750</div>
+                <div class="prod-name">Mens Panjabi - Slim Fit EID</div>
+                <div class="color-row"><div class="color-swatch" style="background:#1b5e20;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=300&h=400&fit=crop" alt="" loading="lazy"/>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 4290</div>
-                <div class="product-name">Womens CO-ORD Set</div>
-                <span class="color-dot" style="background:#880e4f;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 4290</div>
+                <div class="prod-name">Womens CO-ORD Set</div>
+                <div class="color-row"><div class="color-swatch" style="background:#880e4f;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1536766768598-e09213fdcf22?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 1650</div>
-                <div class="product-name">Mens T-Shirt &amp; Polo - Slim Fit</div>
-                <span class="color-dot" style="background:#bf360c;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 1650</div>
+                <div class="prod-name">Mens T-Shirt &amp; Polo - Slim Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#bf360c;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=300&h=400&fit=crop" alt="" loading="lazy"/>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 2290</div>
-                <div class="product-name">Womens Jumpsuit - Occasion Wear</div>
-                <span class="color-dot" style="background:#4a148c;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 2290</div>
+                <div class="prod-name">Womens Jumpsuit - Occasion Wear</div>
+                <div class="color-row"><div class="color-swatch" style="background:#4a148c;"></div></div>
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
-            <div class="product-card">
-              <div class="product-img-wrap">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="prod-card">
+              <div class="prod-img">
                 <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=300&h=400&fit=crop" alt="" loading="lazy"/>
-                <span class="badge-new">New</span>
+                <span class="new-tag">New</span>
               </div>
-              <div class="product-info">
-                <div class="product-price">Tk. 3890</div>
-                <div class="product-name">Mens Panjabi EID Special Fit</div>
-                <span class="color-dot" style="background:#006064;"></span>
+              <div class="prod-body">
+                <div class="prod-price">Tk. 3890</div>
+                <div class="prod-name">Mens Panjabi EID Special Fit</div>
+                <div class="color-row"><div class="color-swatch" style="background:#006064;"></div></div>
               </div>
             </div>
           </div>
@@ -1175,29 +1230,71 @@
     if (p) p.classList.add('active');
   }
 
-  // Category circle slider
-  const TOTAL_CATS = 18;
-  let catIndex = 0;
+  // ── Category circle slider — infinite loop, slides 2 at a time ──
+  (function () {
+    const track = document.getElementById('catTrack');
+    if (!track) return;
 
-  function getVisible() {
-    const w = window.innerWidth;
-    if (w < 576) return 2;
-    if (w < 992) return 3;
-    return 6;
-  }
+    // Gather original items, then clone them all and append
+    const originals = Array.from(track.querySelectorAll('.sub-cat-item'));
+    const totalOrig  = originals.length;
+    originals.forEach(item => track.appendChild(item.cloneNode(true)));
 
-  function slideCategories(dir) {
-    const visible = getVisible();
-    const totalPositions = TOTAL_CATS - visible + 1;
-    catIndex = (catIndex + (dir * 2) + totalPositions * 1000) % totalPositions;
-    const percent = (catIndex / visible) * 100;
-    document.getElementById('catTrack').style.transform = `translateX(-${percent}%)`;
-  }
+    let currentIdx    = 0;
+    let isBusy        = false;
+    const SLIDE_BY    = 3; // Update to 3 to match mobile view
 
-  window.addEventListener('resize', () => {
-    catIndex = 0;
-    document.getElementById('catTrack').style.transform = 'translateX(0)';
-  });
+    function getVisible() {
+      const w = window.innerWidth;
+      if (w < 576) return 3;
+      if (w < 992) return 3;
+      return 6;
+    }
+
+    function itemWidth() {
+      const el = track.querySelector('.sub-cat-item');
+      return el ? el.getBoundingClientRect().width : 0;
+    }
+
+    function moveTo(idx, animate) {
+      track.style.transition = animate
+        ? 'transform 0.45s cubic-bezier(0.4,0,0.2,1)'
+        : 'none';
+      track.style.transform = `translateX(-${idx * itemWidth()}px)`;
+      currentIdx = idx;
+    }
+
+    window.slideCategories = function (dir) {
+      if (isBusy) return;
+      isBusy = true;
+
+      moveTo(currentIdx + dir * SLIDE_BY, true);
+
+      track.addEventListener('transitionend', function onDone() {
+        track.removeEventListener('transitionend', onDone);
+
+        // Seamlessly jump back within the real range
+        if (currentIdx >= totalOrig) {
+          moveTo(currentIdx - totalOrig, false);
+        } else if (currentIdx < 0) {
+          moveTo(currentIdx + totalOrig, false);
+        }
+
+        isBusy = false;
+      });
+    };
+
+    // Recalculate pixel position on resize
+    window.addEventListener('resize', () => moveTo(currentIdx, false));
+
+    // ── Auto-play: slide forward every 3 s, pause on hover ──
+    const section = track.closest('.sub-cat-section') || track.parentElement;
+    let autoTimer = setInterval(() => window.slideCategories(1), 3000);
+    section.addEventListener('mouseenter', () => clearInterval(autoTimer));
+    section.addEventListener('mouseleave', () => {
+      autoTimer = setInterval(() => window.slideCategories(1), 3000);
+    });
+  }());
 
   // View toggle
   function setView(btn, mode) {
