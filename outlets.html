@@ -9,26 +9,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .outlets-page { padding: 40px 0; background: #f8fafc; min-height: 60vh; }
-    .outlets-container { width: 100%; padding: 0 5%; margin: 0 auto; padding: 0 20px; }
-    .outlet-card { background: #fff; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 12px rgba(0,0,0,0.03); overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; height: 100%; }
-    .outlet-card:hover { transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
-    .outlet-img { width: 100%; height: 200px; object-fit: cover; }
-    .outlet-info { padding: 24px; }
-    .outlet-name { font-size: 18px; font-weight: 700; color: #111827; margin-bottom: 12px; }
-    .outlet-detail { display: flex; gap: 12px; margin-bottom: 10px; font-size: 14px; color: #4b5563; }
-    .outlet-detail i { color: var(--blue); margin-top: 3px; }
-    .outlet-footer { padding: 16px 24px; background: #f9fafb; border-top: 1px solid #f3f4f6; display: flex; justify-content: space-between; align-items: center; }
-    .map-link { font-size: 13px; font-weight: 600; color: var(--blue); text-decoration: none; display: flex; align-items: center; gap: 4px; }
-    .map-link:hover { text-decoration: underline; }
-    .status-badge { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 50px; text-transform: uppercase; }
-    .status-open { background: #d1fae5; color: #065f46; }
-    .status-closed { background: #fee2e2; color: #991b1b; }
-    .search-outlets { max-width: 500px; margin: 0 auto 40px; }
-    .search-outlets input { border-radius: 50px; padding: 12px 24px; border: 1.5px solid #e5e7eb; width: 100%; outline: none; transition: border-color 0.2s; }
-    .search-outlets input:focus { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(26, 93, 200, 0.08); }
-  </style>
 </head>
 <body>
 <!-- TOP HEADER -->
@@ -364,7 +344,7 @@
   </nav>
 
 <div class="outlets-page">
-  <div class="outlets-container-site">
+  <div class="container-site outlets-container">
     <div class="text-center mb-5">
       <h1 class="fw-bold mb-3" style="color: #111827;">Our Outlets</h1>
       <p class="text-muted mx-auto" style="max-width: 600px;">Visit our physical stores to experience the quality and elegance of Afia Borka House products firsthand. Our friendly staff is ready to assist you.</p>
@@ -374,10 +354,9 @@
       <input type="text" placeholder="Search by city or area...">
     </div>
     
-    <div class="row gy-4">
+    <div class="outlets-grid">
       <!-- Outlet 1 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="outlet-card">
+      <div class="outlet-card">
           <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=300&fit=crop" class="outlet-img" alt="Outlet">
           <div class="outlet-info">
             <h3 class="outlet-name">Mirpur DOHS Flagship Store</h3>
@@ -399,17 +378,15 @@
             <a href="#" class="map-link">View on Map <i class="bi bi-arrow-right-short"></i></a>
           </div>
         </div>
-      </div>
       
       <!-- Outlet 2 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="outlet-card">
+      <div class="outlet-card">
           <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=500&h=300&fit=crop" class="outlet-img" alt="Outlet">
           <div class="outlet-info">
             <h3 class="outlet-name">Uttara Sector 7 Branch</h3>
             <div class="outlet-detail">
               <i class="bi bi-geo-alt-fill"></i>
-              <span>Level 3, House #12, Road #7, Sector 7, Uttara, Dhaka.</span>
+              <span>Level 3, House #12, Road #7, Sector 7, Avenue #02, Uttara, Dhaka.</span>
             </div>
             <div class="outlet-detail">
               <i class="bi bi-telephone-fill"></i>
@@ -425,10 +402,8 @@
             <a href="#" class="map-link">View on Map <i class="bi bi-arrow-right-short"></i></a>
           </div>
         </div>
-      </div>
       
-      <!-- Outlet 3 -->
-      <div class="col-lg-4 col-md-6">
+        <!-- Outlet 3 -->
         <div class="outlet-card">
           <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=500&h=300&fit=crop" class="outlet-img" alt="Outlet">
           <div class="outlet-info">
@@ -451,7 +426,78 @@
             <a href="#" class="map-link">View on Map <i class="bi bi-arrow-right-short"></i></a>
           </div>
         </div>
-      </div>
+
+        <!-- Outlet 4 -->
+        <div class="outlet-card">
+          <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=500&h=300&fit=crop" class="outlet-img" alt="Outlet">
+          <div class="outlet-info">
+            <h3 class="outlet-name">Jamuna Future Park Store</h3>
+            <div class="outlet-detail">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Shop #22, Level 2, Jamuna Future Park, Kuril, Dhaka.</span>
+            </div>
+            <div class="outlet-detail">
+              <i class="bi bi-telephone-fill"></i>
+              <span>+88-01885-998822</span>
+            </div>
+            <div class="outlet-detail">
+              <i class="bi bi-clock-fill"></i>
+              <span>10:30 AM - 09:00 PM (Thu - Tue)</span>
+            </div>
+          </div>
+          <div class="outlet-footer">
+            <span class="status-badge status-open">Open Now</span>
+            <a href="#" class="map-link">View on Map <i class="bi bi-arrow-right-short"></i></a>
+          </div>
+        </div>
+
+        <!-- Outlet 5 -->
+        <div class="outlet-card">
+          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&h=300&fit=crop" class="outlet-img" alt="Outlet">
+          <div class="outlet-info">
+            <h3 class="outlet-name">Banani Premium Outlet</h3>
+            <div class="outlet-detail">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>House #56, Road #11, Block #F, Banani, Dhaka.</span>
+            </div>
+            <div class="outlet-detail">
+              <i class="bi bi-telephone-fill"></i>
+              <span>+88-01885-998833</span>
+            </div>
+            <div class="outlet-detail">
+              <i class="bi bi-clock-fill"></i>
+              <span>11:00 AM - 09:30 PM (Everyday)</span>
+            </div>
+          </div>
+          <div class="outlet-footer">
+            <span class="status-badge status-open">Open Now</span>
+            <a href="#" class="map-link">View on Map <i class="bi bi-arrow-right-short"></i></a>
+          </div>
+        </div>
+
+        <!-- Outlet 6 -->
+        <div class="outlet-card">
+          <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=500&h=300&fit=crop" class="outlet-img" alt="Outlet">
+          <div class="outlet-info">
+            <h3 class="outlet-name">Dhanmondi Branch</h3>
+            <div class="outlet-detail">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Shop #45, Level 3, Rapa Plaza, Dhanmondi 27, Dhaka.</span>
+            </div>
+            <div class="outlet-detail">
+              <i class="bi bi-telephone-fill"></i>
+              <span>+88-01885-998844</span>
+            </div>
+            <div class="outlet-detail">
+              <i class="bi bi-clock-fill"></i>
+              <span>10:30 AM - 08:30 PM (Wed - Mon)</span>
+            </div>
+          </div>
+          <div class="outlet-footer">
+            <span class="status-badge status-open">Open Now</span>
+            <a href="#" class="map-link">View on Map <i class="bi bi-arrow-right-short"></i></a>
+          </div>
+        </div>
     </div>
   </div>
 </div>
@@ -544,7 +590,7 @@
     </div>
   </div>
   <div class="text-center py-2 small text-muted" style="border-top:1px solid #e5e7eb;">
-    &copy; 2026 Afia Borka House All Rights Reserved.
+    &copy; 2026 Afia Borka House | All Rights Reserved.
   </div>
 </footer>
 
