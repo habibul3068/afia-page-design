@@ -1703,7 +1703,7 @@ body {
 /* ===== SUBCATEGORY CIRCLES ===== */
 .sub-cat-section {
   background: #fff;
-  padding: 22px 0 14px;
+  padding: 12px 0 4px; /* Reduced by 10px to account for the track padding below */
   border-bottom: 1px solid #eee;
 }
 .sub-cat-outer {
@@ -1718,6 +1718,7 @@ body {
 .sub-cat-track {
   display: flex;
   transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px 0; /* Add top/bottom padding so the scaled image won't be clipped by track-wrap's overflow: hidden */
 }
 .sub-cat-item {
   flex: 0 0 calc(100% / 6);
