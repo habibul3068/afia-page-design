@@ -724,6 +724,119 @@ body {
   border-color: var(--blue);
   color: var(--blue);
 }
+
+/* ── Sub-category circle slider (shared by category.html & index.html) ── */
+.sub-cat-section {
+  padding: 0 0 8px;
+  background: #fff;
+}
+.sub-cat-outer {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  width: 100%;
+  padding: 8px 0;
+}
+.sub-cat-track-wrap {
+  flex: 1;
+  overflow: hidden;
+  /* No side clipping — items fully visible */
+}
+.sub-cat-track {
+  display: flex;
+  gap: 0;
+  will-change: transform;
+}
+.sub-cat-item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 6px 4px;
+  /* width controlled by JS-calculated visible count */
+}
+/* Circle image — same look as category.html */
+.sub-cat-item .circle-img,
+.sub-cat-item .cat-img-wrap {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+  flex-shrink: 0;
+}
+.sub-cat-item .circle-img:hover,
+.sub-cat-item .cat-img-wrap:hover {
+  border-color: var(--blue);
+  transform: scale(1.04);
+}
+.sub-cat-item .circle-img img,
+.sub-cat-item .cat-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.sub-cat-item p,
+.sub-cat-item .cat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+  max-width: 110px;
+  line-height: 1.3;
+  margin: 0;
+}
+/* Arrow buttons */
+.sub-cat-arrow {
+  background: #fff;
+  border: 1px solid var(--border);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 14px;
+  flex-shrink: 0;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  position: relative;
+}
+.sub-cat-arrow:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  box-shadow: 0 4px 14px rgba(26, 93, 200, 0.2);
+}
+/* Responsive: smaller circles on mobile */
+@media (max-width: 575px) {
+  .sub-cat-item .circle-img,
+  .sub-cat-item .cat-img-wrap {
+    width: 80px;
+    height: 80px;
+  }
+  .sub-cat-item p,
+  .sub-cat-item .cat-label {
+    font-size: 11px;
+    max-width: 80px;
+  }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .sub-cat-item .circle-img,
+  .sub-cat-item .cat-img-wrap {
+    width: 95px;
+    height: 95px;
+  }
+}
 /* BANNER GRIDS */
 .banner-2col {
   display: grid;

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -212,12 +212,12 @@
         </div>
       </div>
       <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
+      <a href="index.html" class="active">Home</a>
         <a href="category.html">Category</a>
         <a href="products.html">Products</a>
         
         <div class="nav-item d-none d-lg-block">
-          <a href="#" class="eid-fest">EID-UL-FITR 26</a>
+          <a href="products.html" class="eid-fest">EID-UL-FITR 26</a>
           <div class="mega-drop eid-drop">
             <div class="container-site">
               <div class="d-flex align-items-start">
@@ -231,7 +231,7 @@
                 </div>
                 <div class="eid-imgs">
                   <a href="#"><img src="img/men.png" alt="Mens" /></a>
-                  <a href="#"><img src="img/women.png" alt="Womens" /></a>
+                  <a href="#"><img src="img\women.png" alt="Womens" /></a>
                   <a href="#"><img src="img/kids.png" alt="Kids" /></a>
                 </div>
               </div>
@@ -355,26 +355,81 @@
 </div>
 
 <!-- POPULAR CATEGORIES -->
-<div class="section">
+<div class="section" style="padding-top:28px;padding-bottom:16px;">
   <div class="container-site">
-    <div class="sec-head" style="flex-direction:column;align-items:center;gap:8px;text-align:center;">
+    <div class="sec-head" style="flex-direction:column;align-items:center;gap:4px;text-align:center;margin-bottom:12px;">
       <h2 class="sec-title">Popular Categories</h2>
-      <div style="display:flex;gap:8px;justify-content:center;">
-        <button class="cat-nav-btn" onclick="document.getElementById('catScroll').scrollBy({left:-200,behavior:'smooth'})"><i class="bi bi-chevron-left"></i></button>
-        <button class="cat-nav-btn" onclick="document.getElementById('catScroll').scrollBy({left:200,behavior:'smooth'})"><i class="bi bi-chevron-right"></i></button>
-      </div>
     </div>
-    <div class="cats-scroll" id="catScroll">
-      <div class="cat-item"><div class="cat-img-wrap"><img src="https://picsum.photos/seed/cat-saree/200/200" alt="Saree"/></div><span class="cat-label">Saree</span></div>
-      <div class="cat-item"><div class="cat-img-wrap"><img src="https://picsum.photos/seed/cat-panjabi/200/200" alt="Men's Panjabi"/></div><span class="cat-label">Men's Panjabi</span></div>
-      <div class="cat-item" style="position:relative"><div class="cat-img-wrap"><img src="https://picsum.photos/seed/cat-polo-boy/200/200" alt="Boys Polo"/></div><span class="fest-badge">FESTIVAL<br/>2026</span><span class="cat-label">Boys Polo &amp; T-Shirt</span></div>
-      <div class="cat-item"><div class="cat-img-wrap"><img src="https://picsum.photos/seed/cat-girl-tops/200/200" alt="Girls Tops"/></div><span class="cat-label">Girls Tops &amp; Ethnic</span></div>
-      <div class="cat-item"><div class="cat-img-wrap"><img src="https://picsum.photos/seed/cat-mens-shirt/200/200" alt="Men's Casual Shirt"/></div><span class="cat-label">Men's Casual Shirt</span></div>
-      <div class="cat-item"><div class="cat-img-wrap"><img src="https://picsum.photos/seed/cat-formal-pant/200/200" alt="Men's Formal Pant"/></div><span class="cat-label">Men's Formal Pant</span></div>
-      <div class="cat-item"><div class="cat-img-wrap"><img src="https://picsum.photos/seed/cat-mens-winter/200/200" alt="Men's Winter"/></div><span class="cat-label">Men's Winter Collection</span></div>
-      <div class="cat-item"><div class="cat-img-wrap"><img src="https://picsum.photos/seed/cat-women-winter/200/200" alt="Women's Winter"/></div><span class="cat-label">Women's Winter Collection</span></div>
-      <div class="cat-item"><div class="cat-img-wrap"><img src="https://picsum.photos/seed/cat-kids-winter/200/200" alt="Kids Winter"/></div><span class="cat-label">Kids Winter Collection</span></div>
-      <div class="cat-item"><div class="cat-img-wrap"><img src="https://picsum.photos/seed/cat-fashion-tops/200/200" alt="Fashion Tops"/></div><span class="cat-label">Fashion Tops Collection</span></div>
+  </div>
+  <div class="sub-cat-section" style="padding:0;">
+    <div class="sub-cat-outer" style="padding:4px 5% 4px;">
+      <button class="sub-cat-arrow prev" onclick="slideHomeCategories(-1)"><i class="fa fa-chevron-left"></i></button>
+      <div class="sub-cat-track-wrap">
+        <div class="sub-cat-track" id="homeCatTrack">
+          <div class="sub-cat-item">
+            <div class="circle-img">
+              <a href="category.html"><img src="img/imgi_20_sahajadi.png" alt="Saree"/></a>
+            </div>
+            <p><a href="category.html" class="sub-link">Saree</a></p>
+          </div>
+          <div class="sub-cat-item">
+            <div class="circle-img">
+              <a href="category.html"><img src="img/imgi_32_MRR05487.png" alt="Men's Panjabi"/></a>
+            </div>
+            <p><a href="category.html" class="sub-link">Men's Panjabi</a></p>
+          </div>
+          <div class="sub-cat-item" style="position:relative">
+            <div class="circle-img">
+              <a href="category.html"><img src="img/imgi_33_MRR05468.png" alt="Boys Polo"/></a>
+            </div>
+            <span class="fest-badge" style="right:8px;">FESTIVAL<br/>2026</span>
+            <p><a href="category.html" class="sub-link">Boys Polo &amp; T-Shirt</a></p>
+          </div>
+          <div class="sub-cat-item">
+            <div class="circle-img">
+              <a href="category.html"><img src="img/imgi_36_MRR05688.png" alt="Girls Tops"/></a>
+            </div>
+            <p><a href="category.html" class="sub-link">Girls Tops &amp; Ethnic</a></p>
+          </div>
+          <div class="sub-cat-item">
+            <div class="circle-img">
+              <a href="category.html"><img src="img/imgi_60_MRR09055.png" alt="Men's Casual Shirt"/></a>
+            </div>
+            <p><a href="category.html" class="sub-link">Men's Casual Shirt</a></p>
+          </div>
+          <div class="sub-cat-item">
+            <div class="circle-img">
+              <a href="category.html"><img src="img/imgi_63_MRR06873.png" alt="Men's Formal Pant"/></a>
+            </div>
+            <p><a href="category.html" class="sub-link">Men's Formal Pant</a></p>
+          </div>
+          <div class="sub-cat-item">
+            <div class="circle-img">
+              <a href="category.html"><img src="img/imgi_74_MRR08769-Copy.png" alt="Men's Winter"/></a>
+            </div>
+            <p><a href="category.html" class="sub-link">Men's Winter Collection</a></p>
+          </div>
+          <div class="sub-cat-item">
+            <div class="circle-img">
+              <a href="category.html"><img src="img/imgi_76_MRR08837.png" alt="Women's Winter"/></a>
+            </div>
+            <p><a href="category.html" class="sub-link">Women's Winter Collection</a></p>
+          </div>
+          <div class="sub-cat-item">
+            <div class="circle-img">
+              <a href="category.html"><img src="img/imgi_81_MRR09044.png" alt="Kids Winter"/></a>
+            </div>
+            <p><a href="category.html" class="sub-link">Kids Winter Collection</a></p>
+          </div>
+          <div class="sub-cat-item">
+            <div class="circle-img">
+              <a href="category.html"><img src="img/imgi_22_ity-op.png" alt="Fashion Tops"/></a>
+            </div>
+            <p><a href="category.html" class="sub-link">Fashion Tops Collection</a></p>
+          </div>
+        </div>
+      </div>
+      <button class="sub-cat-arrow next" onclick="slideHomeCategories(1)"><i class="fa fa-chevron-right"></i></button>
     </div>
   </div>
 </div>
@@ -383,11 +438,15 @@
 <div class="container-site" style="padding-bottom:0;">
   <div class="banner-2col">
     <div class="banner-item" style="height:300px;">
-      <img src="https://picsum.photos/seed/banner-eid2026-L/600/300" alt="EID Collection"/>
+      <a href="products.html">
+        <img src="img/imgi_185_1-11-768x350.png" alt="EID Collection"/>
+      </a>
       <div class="banner-label"><div class="banner-label-text eid-collection-text">EID-UL-FITR<br/>26 COLLECTION</div></div>
     </div>
     <div class="banner-item" style="height:300px;">
-      <img src="https://picsum.photos/seed/banner-eid2026-R/600/300" alt="EID Collection"/>
+      <a href="products.html">
+        <img src="img/imgi_179_1-12-768x350.png" alt="EID Collection"/>
+      </a>
       <div class="banner-label" style="align-items:flex-end;justify-content:flex-end;padding-right:24px;">
         <div class="banner-label-text eid-collection-text">EID-UL-FITR<br/>26 COLLECTION</div>
       </div>
@@ -395,10 +454,30 @@
   </div>
   <!-- 4-col: MEN / WOMEN / KIDS / ACCESSORIES -->
   <div class="banner-4col">
-    <div class="banner-item" style="height:200px;"><img src="https://picsum.photos/seed/banner-men2026/300/200" alt="Men"/><div class="banner-label"><div class="banner-label-text">MEN</div></div></div>
-    <div class="banner-item" style="height:200px;"><img src="https://picsum.photos/seed/banner-women2026/300/200" alt="Women"/><div class="banner-label"><div class="banner-label-text">WOMEN</div></div></div>
-    <div class="banner-item" style="height:200px;"><img src="https://picsum.photos/seed/banner-kids2026/300/200" alt="Kids"/><div class="banner-label"><div class="banner-label-text">KIDS</div></div></div>
-    <div class="banner-item" style="height:200px;"><img src="https://picsum.photos/seed/banner-acc2026/300/200" alt="Accessories"/><div class="banner-label"><div class="banner-label-text">ACCESSORIES</div></div></div>
+    <div class="banner-item" style="height:200px;">
+      <a href="category.html">
+        <img src="img/imgi_179_1-12-768x350.png" alt="Men"/>
+      </a>
+      <div class="banner-label"><div class="banner-label-text">MEN</div></div>
+    </div>
+    <div class="banner-item" style="height:200px;">
+      <a href="category.html">
+        <img src="img/imgi_182_1-10-768x350.png" alt="Women"/>
+      </a>
+      <div class="banner-label"><div class="banner-label-text">WOMEN</div></div>
+    </div>
+    <div class="banner-item" style="height:200px;">
+      <a href="category.html">
+        <img src="img/imgi_185_1-11-768x350.png" alt="Kids"/>
+      </a>
+      <div class="banner-label"><div class="banner-label-text">KIDS</div></div>
+    </div>
+    <div class="banner-item" style="height:200px;">
+      <a href="category.html">
+        <img src="img/imgi_212_1-4-600x600.png" alt="Accessories"/>
+      </a>
+      <div class="banner-label"><div class="banner-label-text">ACCESSORIES</div></div>
+    </div>
   </div>
 </div>
 
@@ -409,21 +488,21 @@
       <h2 class="sec-title">New Collection</h2>
       <a href="#" class="see-more">See More <i class="bi bi-arrow-right"></i></a>
     </div>
-    <div class="prod-carousel-outer">
+      <div class="prod-carousel-outer">
       <button class="prod-carousel-btn prev-btn" onclick="scrollProd('newCol',-1)"><i class="bi bi-chevron-left"></i></button>
       <div class="prod-grid" id="newCol">
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np1/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1590</div><div class="prod-name">Boys Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#1a5dc8;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np2/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1350</div><div class="prod-name">Boys Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#1a202c;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np3/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2150</div><div class="prod-name">Mens Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#be185d;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np4/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1650</div><div class="prod-name">Boys Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#1a202c;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np5/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1390</div><div class="prod-name">Boys Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#374151;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np6/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2190</div><div class="prod-name">Mens Full Sleeve Casual Shirt &ndash; Slim...</div><div class="color-row"><div class="color-swatch" style="background:#92400e;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np7/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1590</div><div class="prod-name">Boys Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#1a5dc8;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np8/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1350</div><div class="prod-name">Boys Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#1a202c;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np9/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2150</div><div class="prod-name">Mens Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#be185d;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np10/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1650</div><div class="prod-name">Boys Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#1a202c;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np11/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1390</div><div class="prod-name">Boys Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#374151;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/prod-np12/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2190</div><div class="prod-name">Mens Full Sleeve Casual Shirt &ndash; Slim...</div><div class="color-row"><div class="color-swatch" style="background:#92400e;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_103_DSC02140.png" alt="DSC02140"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1590</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">DSC02140</a></div><div class="color-row"><div class="color-swatch" style="background:#808080;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_115_eti-abaya-las-bag.png" alt="Eti Abaya Las Bag"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1350</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Eti Abaya Las Bag</a></div><div class="color-row"><div class="color-swatch" style="background:#a52a2a;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_116_eti-abaya-2.png" alt="Eti Abaya 2"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2150</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Eti Abaya 2</a></div><div class="color-row"><div class="color-swatch" style="background:#8b4513;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_117_eti-abaya-2.png" alt="Eti Abaya 2 Black"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1650</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Eti Abaya 2 Black</a></div><div class="color-row"><div class="color-swatch" style="background:#000000;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_118_eti-abaya-6.png" alt="Eti Abaya 6"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1390</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Eti Abaya 6</a></div><div class="color-row"><div class="color-swatch" style="background:#556b2f;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_119_eti-abaya-51.png" alt="Eti Abaya 51"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2190</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Eti Abaya 51</a></div><div class="color-row"><div class="color-swatch" style="background:#2f4f4f;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_14_Bridal-Koti-Abaya-deep-koliga-2.png" alt="Bridal Koti Deep Kolija"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1590</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Bridal Koti Deep Kolija</a></div><div class="color-row"><div class="color-swatch" style="background:#800000;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_15_Bridal-Koti-Abaya-olive-2.png" alt="Bridal Koti Olive"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1350</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Bridal Koti Olive</a></div><div class="color-row"><div class="color-swatch" style="background:#808000;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_17_Bridal-Koti-Abaya-Marun-2.png" alt="Bridal Koti Maroon"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2150</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Bridal Koti Maroon</a></div><div class="color-row"><div class="color-swatch" style="background:#800000;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_19Bridal-Koti-Abya-Sea-Green3.png" alt="Bridal Koti Sea Green"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1650</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Bridal Koti Sea Green</a></div><div class="color-row"><div class="color-swatch" style="background:#2e8b57;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_20_sahajadi.png" alt="Sahajadi Black"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1390</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Sahajadi Black</a></div><div class="color-row"><div class="color-swatch" style="background:#000000;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_22_ity-op.png" alt="Ity Op"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2190</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Ity Op</a></div><div class="color-row"><div class="color-swatch" style="background:#696969;"></div></div></div></div>
       </div>
       <button class="prod-carousel-btn next-btn" onclick="scrollProd('newCol',1)"><i class="bi bi-chevron-right"></i></button>
     </div>
@@ -435,10 +514,33 @@
 <div class="section" style="padding-top:16px;padding-bottom:0;">
   <div class="container-site">
     <div class="promo-row">
-      <div class="promo-item"><img src="https://picsum.photos/seed/promo-polo2026/400/148" alt="Polo"/><div class="promo-sara-badge">Afia Borka House <i class="bi bi-ribbon"></i></div></div>
-      <div class="promo-item"><img src="https://picsum.photos/seed/promo-saree2026/400/148" alt="Saree"/><div class="promo-sara-badge">Afia Borka House <i class="bi bi-ribbon"></i></div><div class="promo-overlay" style="background:rgba(0,0,0,.2);"><span style="color:#c2185b;font-size:17px;font-weight:900;font-style:italic;text-align:center;text-shadow:0 1px 6px rgba(255,255,255,.9);">WOMENS SAREE</span><span style="background:#fff;color:#c2185b;font-size:9px;font-weight:700;padding:2px 10px;border-radius:2px;margin-top:5px;">Blouse Included</span></div></div>
-      <div class="promo-item"><img src="https://picsum.photos/seed/promo-kaptan2026/400/148" alt="Kaptan"/><div class="promo-sara-badge">Afia Borka House <i class="bi bi-ribbon"></i></div><div class="promo-overlay" style="background:rgba(0,0,0,.25);"><span style="color:#fff;font-size:14px;font-weight:900;text-shadow:0 1px 8px rgba(0,0,0,.7);text-align:center;letter-spacing:1px;">WOMEN&apos;S<br/>KAPTAN</span></div></div>
-      <div class="promo-item"><img src="https://picsum.photos/seed/promo-comforter2026/400/148" alt="Comforter"/><div class="promo-sara-badge">Afia Borka House <i class="bi bi-ribbon"></i></div><div class="promo-overlay"><span style="color:#fff;font-size:10px;font-weight:600;background:rgba(0,0,80,.5);padding:2px 10px;border-radius:3px;letter-spacing:1px;">Winter</span><span style="color:#fff;font-size:20px;font-weight:900;text-shadow:0 2px 10px rgba(0,0,0,.6);margin-top:4px;">Comforter</span></div></div>
+      <div class="promo-item">
+        <a href="products.html">
+          <img src="img/imgi_179_1-12-768x350.png" alt="Polo"/>
+        </a>
+        <div class="promo-sara-badge">Afia Borka House <i class="bi bi-ribbon"></i></div>
+      </div>
+      <div class="promo-item">
+        <a href="products.html">
+          <img src="img/imgi_182_1-10-768x350.png" alt="Saree"/>
+          <div class="promo-overlay" style="background:rgba(0,0,0,.2);"><span style="color:#c2185b;font-size:17px;font-weight:900;font-style:italic;text-align:center;text-shadow:0 1px 6px rgba(255,255,255,.9);">WOMENS SAREE</span><span style="background:#fff;color:#c2185b;font-size:9px;font-weight:700;padding:2px 10px;border-radius:2px;margin-top:5px;">Blouse Included</span></div>
+        </a>
+        <div class="promo-sara-badge">Afia Borka House <i class="bi bi-ribbon"></i></div>
+      </div>
+      <div class="promo-item">
+        <a href="products.html">
+          <img src="img/imgi_212_1-4-600x600.png" alt="Kaptan"/>
+          <div class="promo-overlay" style="background:rgba(0,0,0,.25);"><span style="color:#fff;font-size:14px;font-weight:900;text-shadow:0 1px 8px rgba(0,0,0,.7);text-align:center;letter-spacing:1px;">WOMEN&apos;S<br/>KAPTAN</span></div>
+        </a>
+        <div class="promo-sara-badge">Afia Borka House <i class="bi bi-ribbon"></i></div>
+      </div>
+      <div class="promo-item">
+        <a href="products.html">
+          <img src="img/imgi_217_1-3-600x600.png" alt="Comforter"/>
+          <div class="promo-overlay"><span style="color:#fff;font-size:10px;font-weight:600;background:rgba(0,0,80,.5);padding:2px 10px;border-radius:3px;letter-spacing:1px;">Winter</span><span style="color:#fff;font-size:20px;font-weight:900;text-shadow:0 2px 10px rgba(0,0,0,.6);margin-top:4px;">Comforter</span></div>
+        </a>
+        <div class="promo-sara-badge">Afia Borka House <i class="bi bi-ribbon"></i></div>
+      </div>
     </div>
   </div>
 </div>
@@ -451,25 +553,25 @@
         <h2 class="sec-title">Trending Now</h2>
         <div class="filter-tabs"><button class="ftab active">Panjabi</button><button class="ftab">Saree</button><button class="ftab">Mens Top Wear</button><button class="ftab">Womens Top Wear</button></div>
       </div>
-      <a href="#" class="see-more">See More <i class="bi bi-arrow-right"></i></a>
+      <a href="products.html" class="see-more">See More <i class="bi bi-arrow-right"></i></a>
     </div>
     <div class="prod-carousel-outer">
       <button class="prod-carousel-btn prev-btn" onclick="scrollProd('trendCol',-1)"><i class="bi bi-chevron-left"></i></button>
       <div class="prod-grid" id="trendCol">
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-1/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2990</div><div class="prod-name">Mens Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#1a202c;"></div><div class="color-swatch" style="background:#1a5dc8;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-2/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 2240</div><div class="prod-name">Mens Panjabi &ndash; Slim Fit</div><div class="color-row"><div class="color-swatch" style="background:#991b1b;"></div><div class="color-swatch" style="background:#1a202c;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-3/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 1930</div><div class="prod-name">Mens Panjabi &ndash; Slim Fit</div><div class="color-row"><div class="color-swatch" style="background:#60a5fa;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-4/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2150</div><div class="prod-name">Mens Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#be185d;"></div><div class="color-swatch" style="background:#78350f;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-5/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 3290</div><div class="prod-name">Mens Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#60a5fa;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-6/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1850</div><div class="prod-name">Mens Panjabi &ndash; Slim Fit</div><div class="color-row"><div class="color-swatch" style="background:#1a5dc8;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-7/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2750</div><div class="prod-name">Mens Formal Panjabi &ndash; Embroidered</div><div class="color-row"><div class="color-swatch" style="background:#374151;"></div><div class="color-swatch" style="background:#be185d;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-8/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 1680</div><div class="prod-name">Boys Panjabi &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#1a5dc8;"></div><div class="color-swatch" style="background:#991b1b;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-9/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 3490</div><div class="prod-name">EID Special Panjabi &ndash; Premium</div><div class="color-row"><div class="color-swatch" style="background:#14532d;"></div><div class="color-swatch" style="background:#1a202c;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-10/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 2090</div><div class="prod-name">Mens Casual Shirt &ndash; Slim Fit</div><div class="color-row"><div class="color-swatch" style="background:#60a5fa;"></div><div class="color-swatch" style="background:#fff" style="border:1px solid #d1d5db;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-11/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1590</div><div class="prod-name">Boys Polo T-Shirt &ndash; Regular Fit</div><div class="color-row"><div class="color-swatch" style="background:#be185d;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-12/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 2380</div><div class="prod-name">Mens Formal Shirt &ndash; Slim Fit</div><div class="color-row"><div class="color-swatch" style="background:#1a202c;"></div><div class="color-swatch" style="background:#374151;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-13/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2850</div><div class="prod-name">Mens Panjabi &ndash; Embroidered</div><div class="color-row"><div class="color-swatch" style="background:#92400e;"></div><div class="color-swatch" style="background:#1a5dc8;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/tr-14/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 1750</div><div class="prod-name">Boys Polo &ndash; Casual Fit</div><div class="color-row"><div class="color-swatch" style="background:#14532d;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_27_sahajadi.png" alt="Sahajadi Red"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2990</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Sahajadi Red</a></div><div class="color-row"><div class="color-swatch" style="background:#b22222;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_32_MRR05487.png" alt="MRR05487"/></a></div><div class="prod-body"><div class="prod-price">Tk. 2240</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR05487</a></div><div class="color-row"><div class="color-swatch" style="background:#4682b4;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_33_MRR05468.png" alt="MRR05468"/></a></div><div class="prod-body"><div class="prod-price">Tk. 1930</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR05468</a></div><div class="color-row"><div class="color-swatch" style="background:#d2b48c;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_36_MRR05688.png" alt="MRR05688"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2150</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR05688</a></div><div class="color-row"><div class="color-swatch" style="background:#5f9ea0;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_47_MRR08847-1.png" alt="MRR08847"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 3290</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR08847</a></div><div class="color-row"><div class="color-swatch" style="background:#bc8f8f;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_54_MRR08980.png" alt="MRR08980"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1850</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR08980</a></div><div class="color-row"><div class="color-swatch" style="background:#778899;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_60_MRR09055.png" alt="MRR09055"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2750</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR09055</a></div><div class="color-row"><div class="color-swatch" style="background:#6a5acd;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_63_MRR06873.png" alt="MRR06873"/></a></div><div class="prod-body"><div class="prod-price">Tk. 1680</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR06873</a></div><div class="color-row"><div class="color-swatch" style="background:#483d8b;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_74_MRR08769-Copy.png" alt="MRR08769"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 3490</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR08769</a></div><div class="color-row"><div class="color-swatch" style="background:#8b0000;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_76_MRR08837.png" alt="MRR08837"/></a></div><div class="prod-body"><div class="prod-price">Tk. 2090</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR08837</a></div><div class="color-row"><div class="color-swatch" style="background:#8b008b;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_81_MRR09044.png" alt="MRR09044"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1590</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR09044</a></div><div class="color-row"><div class="color-swatch" style="background:#9400d3;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_88_MRR09005.png" alt="MRR09005"/></a></div><div class="prod-body"><div class="prod-price">Tk. 2380</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR09005</a></div><div class="color-row"><div class="color-swatch" style="background:#9932cc;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_97_Picsart_2.png" alt="Picsart 2"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2850</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Picsart 2</a></div><div class="color-row"><div class="color-swatch" style="background:#800080;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_98_Picsart_25.png" alt="Picsart 25"/></a></div><div class="prod-body"><div class="prod-price">Tk. 1750</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Picsart 25</a></div><div class="color-row"><div class="color-swatch" style="background:#ba55d3;"></div></div></div></div>
       </div>
       <button class="prod-carousel-btn next-btn" onclick="scrollProd('trendCol',1)"><i class="bi bi-chevron-right"></i></button>
     </div>
@@ -485,25 +587,25 @@
         <h2 class="sec-title">LifeStyle Accessories</h2>
         <div class="filter-tabs"><button class="ftab active">Mens Wallet</button><button class="ftab">Mens Belt</button><button class="ftab">Bags</button><button class="ftab">Womens Bag</button></div>
       </div>
-      <a href="#" class="see-more">See More <i class="bi bi-arrow-right"></i></a>
+      <a href="products.html" class="see-more">See More <i class="bi bi-arrow-right"></i></a>
     </div>
     <div class="prod-carousel-outer">
       <button class="prod-carousel-btn prev-btn" onclick="scrollProd('accCol',-1)"><i class="bi bi-chevron-left"></i></button>
       <div class="prod-grid" id="accCol">
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-1/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1650</div><div class="prod-name">Mens Leather Long Wallet</div><div class="color-row"><div class="color-swatch" style="background:#1a202c;"></div><div class="color-swatch" style="background:#78350f;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-2/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1290</div><div class="prod-name">Mens Leather Bi-fold Wallet</div><div class="color-row"><div class="color-swatch" style="background:#1a202c;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-3/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1290</div><div class="prod-name">Mens Formal Leather Belt</div><div class="color-row"><div class="color-swatch" style="background:#78350f;"></div><div class="color-swatch" style="background:#1a202c;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-4/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 1350</div><div class="prod-name">Mens Canvas Backpack</div><div class="color-row"><div class="color-swatch" style="background:#1a202c;"></div><div class="color-swatch" style="background:#374151;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-5/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 1350</div><div class="prod-name">Womens Handbag &ndash; Leather</div><div class="color-row"><div class="color-swatch" style="background:#be185d;"></div><div class="color-swatch" style="background:#1a202c;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-6/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 1350</div><div class="prod-name">Mens Casual Belt &ndash; Reversible</div><div class="color-row"><div class="color-swatch" style="background:#78350f;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-7/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2150</div><div class="prod-name">Womens Tote Bag &ndash; Premium</div><div class="color-row"><div class="color-swatch" style="background:#be185d;"></div><div class="color-swatch" style="background:#92400e;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-8/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 890</div><div class="prod-name">Mens Sunglasses &ndash; UV400</div><div class="color-row"><div class="color-swatch" style="background:#1a202c;"></div><div class="color-swatch" style="background:#991b1b;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-9/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1790</div><div class="prod-name">Mens Leather Card Holder</div><div class="color-row"><div class="color-swatch" style="background:#78350f;"></div><div class="color-swatch" style="background:#1a202c;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-10/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 1190</div><div class="prod-name">Womens Clutch Bag &ndash; Stylish</div><div class="color-row"><div class="color-swatch" style="background:#be185d;"></div><div class="color-swatch" style="background:#374151;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-11/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2490</div><div class="prod-name">Mens Laptop Backpack &ndash; 15"</div><div class="color-row"><div class="color-swatch" style="background:#1a5dc8;"></div><div class="color-swatch" style="background:#1a202c;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-12/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 750</div><div class="prod-name">Mens Woven Belt &ndash; Casual</div><div class="color-row"><div class="color-swatch" style="background:#374151;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-13/300/400" alt=""/><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1980</div><div class="prod-name">Womens Shoulder Bag &ndash; Leather</div><div class="color-row"><div class="color-swatch" style="background:#92400e;"></div><div class="color-swatch" style="background:#be185d;"></div></div></div></div>
-        <div class="prod-card"><div class="prod-img"><img src="https://picsum.photos/seed/acc-14/300/400" alt=""/></div><div class="prod-body"><div class="prod-price">Tk. 1450</div><div class="prod-name">Mens Travel Wallet &ndash; RFID Block</div><div class="color-row"><div class="color-swatch" style="background:#1a202c;"></div><div class="color-swatch" style="background:#78350f;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_103_DSC02140.png" alt="DSC02140"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1650</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">DSC02140</a></div><div class="color-row"><div class="color-swatch" style="background:#808080;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_115_eti-abaya-las-bag.png" alt="Eti Abaya Las Bag"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1290</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Eti Abaya Las Bag</a></div><div class="color-row"><div class="color-swatch" style="background:#a52a2a;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_116_eti-abaya-2.png" alt="Eti Abaya 2"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1290</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Eti Abaya 2</a></div><div class="color-row"><div class="color-swatch" style="background:#8b4513;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_117_eti-abaya-2.png" alt="Eti Abaya 2 Black"/></a></div><div class="prod-body"><div class="prod-price">Tk. 1350</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Eti Abaya 2 Black</a></div><div class="color-row"><div class="color-swatch" style="background:#000000;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_118_eti-abaya-6.png" alt="Eti Abaya 6"/></a></div><div class="prod-body"><div class="prod-price">Tk. 1350</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Eti Abaya 6</a></div><div class="color-row"><div class="color-swatch" style="background:#556b2f;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_119_eti-abaya-51.png" alt="Eti Abaya 51"/></a></div><div class="prod-body"><div class="prod-price">Tk. 1350</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Eti Abaya 51</a></div><div class="color-row"><div class="color-swatch" style="background:#2f4f4f;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_14_Bridal-Koti-Abaya-deep-koliga-2.png" alt="Bridal Koti Deep Kolija"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2150</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Bridal Koti Deep Kolija</a></div><div class="color-row"><div class="color-swatch" style="background:#800000;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_15_Bridal-Koti-Abaya-olive-2.png" alt="Bridal Koti Olive"/></a></div><div class="prod-body"><div class="prod-price">Tk. 890</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Bridal Koti Olive</a></div><div class="color-row"><div class="color-swatch" style="background:#808000;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_17_Bridal-Koti-Abaya-Marun-2.png" alt="Bridal Koti Maroon"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1790</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Bridal Koti Maroon</a></div><div class="color-row"><div class="color-swatch" style="background:#800000;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_19Bridal-Koti-Abya-Sea-Green3.png" alt="Bridal Koti Sea Green"/></a></div><div class="prod-body"><div class="prod-price">Tk. 1190</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Bridal Koti Sea Green</a></div><div class="color-row"><div class="color-swatch" style="background:#2e8b57;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_20_sahajadi.png" alt="Sahajadi Black"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 2490</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Sahajadi Black</a></div><div class="color-row"><div class="color-swatch" style="background:#000000;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_22_ity-op.png" alt="Ity Op"/></a></div><div class="prod-body"><div class="prod-price">Tk. 750</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Ity Op</a></div><div class="color-row"><div class="color-swatch" style="background:#696969;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_27_sahajadi.png" alt="Sahajadi Red"/></a><span class="new-tag">New</span></div><div class="prod-body"><div class="prod-price">Tk. 1980</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">Sahajadi Red</a></div><div class="color-row"><div class="color-swatch" style="background:#b22222;"></div></div></div></div>
+        <div class="prod-card"><div class="prod-img"><a href="products.html"><img src="img/imgi_32_MRR05487.png" alt="MRR05487"/></a></div><div class="prod-body"><div class="prod-price">Tk. 1450</div><div class="prod-name"><a href="products.html" class="prod-link sub-link">MRR05487</a></div><div class="color-row"><div class="color-swatch" style="background:#4682b4;"></div></div></div></div>
       </div>
       <button class="prod-carousel-btn next-btn" onclick="scrollProd('accCol',1)"><i class="bi bi-chevron-right"></i></button>
     </div>
@@ -690,6 +792,82 @@
   </div>
 </div>
 
+
+<script>
+  // ── Home page Popular Categories circle slider — infinite loop ──
+  (function () {
+    const track = document.getElementById('homeCatTrack');
+    if (!track) return;
+
+    // Clone all items for infinite loop
+    const originals = Array.from(track.querySelectorAll('.sub-cat-item'));
+    const totalOrig  = originals.length;
+    originals.forEach(item => track.appendChild(item.cloneNode(true)));
+
+    let currentIdx = 0;
+    let isBusy     = false;
+    const SLIDE_BY = 2;
+
+    function getVisibleCount() {
+      const w = window.innerWidth;
+      if (w < 480)  return 3;
+      if (w < 768)  return 4;
+      if (w < 992)  return 5;
+      return 6;
+    }
+
+    function resizeItems() {
+      const wrap  = track.parentElement;
+      const avail = wrap ? wrap.offsetWidth : window.innerWidth;
+      const vis   = getVisibleCount();
+      const w     = Math.floor(avail / vis);
+      track.querySelectorAll('.sub-cat-item').forEach(el => {
+        el.style.width = w + 'px';
+      });
+    }
+
+    function itemWidth() {
+      const el = track.querySelector('.sub-cat-item');
+      return el ? el.getBoundingClientRect().width : 0;
+    }
+
+    function moveTo(idx, animate) {
+      track.style.transition = animate
+        ? 'transform 0.45s cubic-bezier(0.4,0,0.2,1)'
+        : 'none';
+      track.style.transform = `translateX(-${idx * itemWidth()}px)`;
+      currentIdx = idx;
+    }
+
+    window.slideHomeCategories = function (dir) {
+      if (isBusy) return;
+      isBusy = true;
+      moveTo(currentIdx + dir * SLIDE_BY, true);
+      track.addEventListener('transitionend', function onDone() {
+        track.removeEventListener('transitionend', onDone);
+        if (currentIdx >= totalOrig) {
+          moveTo(currentIdx - totalOrig, false);
+        } else if (currentIdx < 0) {
+          moveTo(currentIdx + totalOrig, false);
+        }
+        isBusy = false;
+      });
+    };
+
+    // Initial sizing + recalc on resize
+    resizeItems();
+    moveTo(0, false);
+    window.addEventListener('resize', () => { resizeItems(); moveTo(currentIdx, false); });
+
+    // Auto-play: slide every 3 s, pause on hover
+    const section = track.closest('.sub-cat-section') || track.parentElement;
+    let autoTimer = setInterval(() => window.slideHomeCategories(1), 3000);
+    section.addEventListener('mouseenter', () => clearInterval(autoTimer));
+    section.addEventListener('mouseleave', () => {
+      autoTimer = setInterval(() => window.slideHomeCategories(1), 3000);
+    });
+  }());
+</script>
 
 <script>
   function openMobAccount(e) {
